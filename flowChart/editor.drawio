@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="nZxn0fxFmPk72MjLO2GL" name="페이지-1">
-        <mxGraphModel dx="3982" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="4351" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -90,6 +90,11 @@
                 <mxCell id="50" value="" style="edgeStyle=none;html=1;strokeColor=#000000;fontSize=20;fontColor=#000000;" edge="1" parent="1" source="46" target="49">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="117" style="edgeStyle=none;html=1;strokeColor=#000000;fontSize=20;fontColor=#000000;" edge="1" parent="1" source="46">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="740" y="1840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="46" value="for 문&lt;br&gt;let j = 0; j &amp;lt; command.length" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="387.5" y="1750" width="205" height="180" as="geometry"/>
                 </mxCell>
@@ -125,6 +130,16 @@
                 </mxCell>
                 <mxCell id="94" value="" style="edgeStyle=none;html=1;strokeColor=#000000;fontSize=20;fontColor=#000000;" edge="1" parent="1" source="55" target="93">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" style="edgeStyle=none;html=1;entryX=-0.005;entryY=0.503;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;fontSize=20;fontColor=#000000;" edge="1" parent="1" source="55" target="46">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="490" y="2640"/>
+                            <mxPoint x="340" y="2640"/>
+                            <mxPoint x="330" y="2260"/>
+                            <mxPoint x="320" y="1841"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="55" value="B가 포함되어져 있는 경우" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="400" y="2490" width="180" height="60" as="geometry"/>
@@ -242,6 +257,12 @@
                 </mxCell>
                 <mxCell id="106" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;false&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="-30" y="2560" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;false&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="1870" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="startStr.join('')" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=20;fontColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="1810" width="140" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

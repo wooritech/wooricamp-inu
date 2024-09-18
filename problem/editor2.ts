@@ -1,5 +1,6 @@
 import { string } from "./editor";
-
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().trim();
 function editior2(string:string) {
     const splitStr = string.split('\n');
     let startStr  = splitStr[0].split('');
@@ -37,5 +38,5 @@ function editior2(string:string) {
     console.log(startStr.join(''));
 };
 
-editior2(string);
+editior2(input);
 
