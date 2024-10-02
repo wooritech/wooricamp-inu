@@ -1,6 +1,6 @@
 import { string } from "./editor";
-const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().trim();
+// const fs = require('fs');
+// const input = fs.readFileSync('/dev/stdin').toString().trim();
 function editior2(string:string) {
     const splitStr = string.split('\n');
     let startStr  = splitStr[0].split('');
@@ -30,7 +30,7 @@ function editior2(string:string) {
 
         }else if(command[j].includes('B')){
             if(cursor > 0) {
-                startStr.splice(cursor -1, 1);
+                startStr.shift();
                 cursor -= 1;
             }
         }
@@ -38,5 +38,4 @@ function editior2(string:string) {
     console.log(startStr.join(''));
 };
 
-editior2(input);
-
+editior2(string);

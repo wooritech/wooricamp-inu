@@ -1,0 +1,14 @@
+const input = `dmih
+11
+B
+B
+P x
+L
+B
+B
+B
+P y
+D
+D
+P z`;
+
