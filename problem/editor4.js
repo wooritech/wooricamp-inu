@@ -12,3 +12,14 @@ D
 D
 P z`;
 
+class Node {
+    constructor(input) {
+      this.data = input;  
+      this.next = null;  
+    }
+  }
+  class SinglyLinkedList {
+    constructor() {
+      this.head = null;
+    }
+  }
