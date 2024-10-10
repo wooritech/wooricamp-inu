@@ -45,7 +45,7 @@ P z`;
 //     return start;
 // }
 
-let start = input.split('\n')[0].split('');
+
 let cursor = start.length;
 const splitStr = input.split('\n');
 let newArr = start;

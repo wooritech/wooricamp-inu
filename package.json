@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prob": "ts-node ./problem/editor3.js"
+    "prob": "ts-node ./problem/editor4.js"
   },
   "keywords": [],
   "author": "",
