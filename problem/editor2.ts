@@ -8,34 +8,35 @@ function editior2(string:string) {
     const length  = Number(splitStr[1]);
     const command = [];
 
-    for(let i = 2; i < length+2; i++ ) {
+    for (let i = 2; i < length+2; i++ ) {
         command[i-2] = splitStr[i];
-       };
+    }
 
-    for(let j = 0; j < command.length; j++){
-        if(command[j].includes('P')){
+    for (let j = 0; j < command.length; j++){
+        if (command[j].includes('P')) {
             const Alphabet = command[j].split('')[2];
             startStr.splice(cursor, 0, Alphabet);
             cursor += 1;
-        }else if(command[j].includes('L')){
+        } else if (command[j].includes('L')) {
             cursor -= 1;
             if(cursor <= 0){
                 cursor = 0;
             }
-        }else if(command[j].includes('D')){
+        } else if(command[j].includes('D')) {
             cursor +=1 ;
-            if(cursor > startStr.length){
+            if (cursor > startStr.length){
                 cursor = startStr.length;
             }
 
-        }else if(command[j].includes('B')){
+        } else if(command[j].includes('B')) {
             if(cursor > 0) {
                 startStr.shift();
                 cursor -= 1;
             }
         }
     }
+
     console.log(startStr.join(''));
-};
+}
 
 editior2(string);

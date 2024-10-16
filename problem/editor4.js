@@ -9,12 +9,13 @@ P x
 L
 B
 P y`;
+
 let start = input.split('\n')[0].split('');
 let commands = input.split('\n').slice(2); 
 let arr = [];
 
 commands.forEach((cmd) => {
-    if( cmd.startsWith('P') ) {
+    if ( cmd.startsWith('P') ) {
         const char = cmd.split(' ')[1];
         start.push(char)
     } else if (cmd === 'B') {
@@ -32,5 +33,6 @@ commands.forEach((cmd) => {
             arr.pop();
         }
     }
-});
+})
+
 console.log(start.join('') + arr.reverse().join(''));

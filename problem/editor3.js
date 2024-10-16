@@ -51,49 +51,54 @@ const splitStr = input.split('\n');
 let newArr = start;
 let command = [];
 
-for(let i = 2; i < splitStr.length; i++ ) {
+for (let i = 2; i < splitStr.length; i++ ) {
     command[i-2] = splitStr[i];
-};
+}
 
-for(let i = 0; i < command.length; i++){
-    if(command[i] === 'B') {
+for (let i = 0; i < command.length; i++) {
+    if (command[i] === 'B') {
         if (cursor > 0) {
             let left = []; 
-            let right = [];  
-    
+            let right = [];
+
             for (let j = 0; j < cursor - 1; j++) {
                 left.push(newArr[j]);
             }
+
             for (let j = cursor; j < newArr.length; j++) {
                 right.push(newArr[j]);
             }
+
             newArr = left.concat(right); 
             cursor--;  
         }
-        if(cursor <= 0){
+        if (cursor <= 0) {
             cursor = 0;
         }
-    }else if(command[i] === 'D') {
+    } else if (command[i] === 'D') {
         if (cursor < newArr.length) {
             cursor++;
         }
-    }else if(command[i] === 'L') {
+    } else if (command[i] === 'L') {
         if (cursor > 0) {
             cursor--;
         }
-    }else if(command[i].includes('P')) {
+    } else if (command[i].includes('P')) {
         const Alphabet = command[i].split(' ')[1];
         let left = [];
         let right = [];
 
-        for(let j = 0; j < cursor; j++){
+        for (let j = 0; j < cursor; j++) {
             left.push(newArr[j]);
-        };
+        }
+
         for (let j = cursor; j < newArr.length; j++) {
             right.push(newArr[j]);
         }
+
         newArr = left.concat(Alphabet).concat(right);
         cursor++;
     }
 }
+
 console.log(newArr.join(''));
