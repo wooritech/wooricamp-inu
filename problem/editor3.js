@@ -51,7 +51,7 @@ const splitStr = input.split('\n');
 let newArr = start;
 let command = [];
 
-for (let i = 2; i < splitStr.length; i++ ) {
+for (let i = 2; i < splitStr.length; i++) {
     command[i-2] = splitStr[i];
 }
 

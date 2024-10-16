@@ -18,7 +18,7 @@ function editior(s:string) {
     const length  = Number(splitStr[1]);
     const command = [];
 
-    for (let i = 2; i < length+2; i++ ) {
+    for (let i = 2; i < length+2; i++) {
     command[i-2] = splitStr[i]
     }
 
@@ -32,17 +32,17 @@ function editior(s:string) {
             } else {
                 startStr[cursor-1] = startStr[cursor-1] + Alphabet; 
             }
-        } else if(command[i].includes('L')) {
+        } else if (command[i].includes('L')) {
             cursor = cursor - 2;
-            if(cursor < 0) {
+            if (cursor < 0) {
                 cursor = 0;
             }
-        } else if(command[i].includes('D')) {
+        } else if (command[i].includes('D')) {
             cursor = cursor + 2
-            if(cursor > startStr.length) {
-                cursor = startStr.length
+            if (cursor > startStr.length) {
+                cursor = startStr.length;
             }
-        } else if(command[i].includes('B')) {
+        } else if (command[i].includes('B')) {
             if (cursor > 1) {
                 cursor = cursor - 1;
                 startStr.splice(cursor,1);
@@ -50,18 +50,18 @@ function editior(s:string) {
                 if(cursor < 0){
                     cursor = 0;
                 }
-            } else if(cursor < 0) {
+            } else if (cursor < 0) {
                 cursor = 0;
-            } else if(cursor == 0) {
+            } else if (cursor == 0) {
                 if (startStr.length !== 1) {
                     startStr.splice(0,1);
                 } else {
                     startStr = startStr;
                 }
             } else if (cursor == 1) {
-                startStr.splice(cursor-1,1)
+                startStr.splice(cursor-1,1);
             } else {
-                startStr.splice(cursor-1,1)
+                startStr.splice(cursor-1,1);
             }
         }
 
