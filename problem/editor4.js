@@ -33,6 +33,6 @@ commands.forEach((cmd) => {
             arr.pop();
         }
     }
-})
+});
 
 console.log(start.join('') + arr.reverse().join(''));
