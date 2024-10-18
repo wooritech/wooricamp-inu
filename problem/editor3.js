@@ -30,8 +30,8 @@ P z`;
 
 // function B(num) {
 //     if (num > 0) {
-//         let left = []; 
-//         let right = [];  
+//         let left = [];
+//         let right = [];
 
 //         for (let i = 0; i < num - 1; i++) {
 //             left.push(start[i]);
@@ -39,26 +39,25 @@ P z`;
 //         for (let i = num; i < start.length; i++) {
 //             right.push(start[i]);
 //         }
-//         start = left.concat(right); 
-//         cursor--;  
+//         start = left.concat(right);
+//         cursor--;
 //     }
 //     return start;
 // }
 
-
 let cursor = start.length;
-const splitStr = input.split('\n');
+const splitStr = input.split("\n");
 let newArr = start;
 let command = [];
 
 for (let i = 2; i < splitStr.length; i++) {
-    command[i-2] = splitStr[i];
+    command[i - 2] = splitStr[i];
 }
 
 for (let i = 0; i < command.length; i++) {
-    if (command[i] === 'B') {
+    if (command[i] === "B") {
         if (cursor > 0) {
-            let left = []; 
+            let left = [];
             let right = [];
 
             for (let j = 0; j < cursor - 1; j++) {
@@ -69,22 +68,22 @@ for (let i = 0; i < command.length; i++) {
                 right.push(newArr[j]);
             }
 
-            newArr = left.concat(right); 
-            cursor--;  
+            newArr = left.concat(right);
+            cursor--;
         }
         if (cursor <= 0) {
             cursor = 0;
         }
-    } else if (command[i] === 'D') {
+    } else if (command[i] === "D") {
         if (cursor < newArr.length) {
             cursor++;
         }
-    } else if (command[i] === 'L') {
+    } else if (command[i] === "L") {
         if (cursor > 0) {
             cursor--;
         }
-    } else if (command[i].includes('P')) {
-        const Alphabet = command[i].split(' ')[1];
+    } else if (command[i].includes("P")) {
+        const Alphabet = command[i].split(" ")[1];
         let left = [];
         let right = [];
 
@@ -101,4 +100,4 @@ for (let i = 0; i < command.length; i++) {
     }
 }
 
-console.log(newArr.join(''));
+console.log(newArr.join(""));
