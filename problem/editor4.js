@@ -10,13 +10,13 @@ L
 B
 P y`;
 
-let beforeCursor = input.split("\n")[0].split("");
-let commands = input.split("\n").slice(2);
+let beforeCursor = input.split("\n")[0].split(""); // 첫번째 입력값을 배열로 만들기
+let commands = input.split("\n").slice(2); // 입력값의 세번째부터 끝까지 배열로 담기
 let afterCursor = [];
 
 commands.forEach((cmd) => {
     if (cmd.startsWith("P")) {
-        const char = cmd.split(" ")[1];
+        const char = cmd.split(" ")[1]; //
         beforeCursor.push(char);
     } else if (cmd === "B") {
         if (beforeCursor.length > 0) {
@@ -35,4 +35,5 @@ commands.forEach((cmd) => {
     }
 });
 
-console.log(beforeCursor.join("") + afterCursor.reverse().join(""));
+// console.log(beforeCursor.join("") + afterCursor.reverse().join(""));
+console.log(commands);
