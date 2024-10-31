@@ -32,11 +32,11 @@ const reversedSentences = []; // 각 문장 뒤집힌 단어들을 저장할 배
  */
 for (let i = 1; i <= strLength; i++) {
     const words = split[i].split(' ');
-    const Sentences = [];
+    const sentences = [];
     for (let j = 0; j < words.length; j++) {
-        Sentences.push([...words[j]]);
+        sentences.push([...words[j]]);
     }
-    reversedSentences.push(Sentences); // 줄바꿈을 기준으로 즉 문장 단위로 배열에 담기 위해 두번째 for문 밖에서 reversedSentences에 Sentences 값 push
+    reversedSentences.push(sentences); // 줄바꿈을 기준으로 즉 문장 단위로 배열에 담기 위해 두번째 for문 밖에서 reversedSentences에 Sentences 값 push
 }
 /**
  *  각 단어들을 뒤집어 같은 위치에 저장
