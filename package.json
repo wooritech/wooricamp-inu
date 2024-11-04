@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "prob": "node ./problem/9093/reverse.js",
+        "prob": "node ./problem/3003/chess.js",
         "clean": "prettier --write **/*.js *.mjs problem/**/*.js"
     },
     "keywords": [],
