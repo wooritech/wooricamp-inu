@@ -6,6 +6,6 @@ function chess(input) {
     for (let i = 0; i < count; i++) {
         newArr[i] = Number(formatArr[i]) - split[i];
     }
-    console.log(newArr);
+    return newArr.join(' ');
 }
 module.exports = chess;

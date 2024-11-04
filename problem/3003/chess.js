@@ -17,11 +17,12 @@
  */
 
 const input = '2 1 2 1 2 1';
-const formatArr = ['1', '1', '2', '2', '2', '8'];
-const split = input.split(' ');
-const count = 6;
-const newArr = [];
+const formatArr = ['1', '1', '2', '2', '2', '8']; // 기본적으로 가지고 있어야 할 체스 말의 갯수
+const split = input.split(' '); // 띄어쓰기를 기준으로 배열로 만든다.
+const count = 6; // 킹, 퀸, 룩, 비숍, 나이트, 폰 총 6번을 순회해야 하므로 6대신 count로 변수명을 지어줌
+const newArr = []; // 새로운 배열에 부족하거나 필요한 갯수를 저장한다.
 for (let i = 0; i < count; i++) {
     newArr[i] = Number(formatArr[i]) - split[i];
 }
-console.log(newArr);
+
+console.log(newArr.join(' ')); // 띄어쓰기를 주며 합친다.
