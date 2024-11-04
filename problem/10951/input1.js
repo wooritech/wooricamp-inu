@@ -27,10 +27,9 @@ const input = `1 1
 const inputBOJ = input.toString().trim().split('\n'); // 백준에서 제출할때와 최대한 비슷하게 맞춤
 const numArr = inputBOJ;
 const sum = []; // 숫자의 합을 담을 배열 초기화
-let numbers = []; // 더할 숫자를 각각 추출하기 위해 2개의 숫자를 담을 배열 초기화
 numArr.forEach((line) => {
     // forEach를 사용해 순회
-    numbers = line.split(' '); // numArr를 순회하며 배열 순서대로 띄어쓰기 기준으로 나눠 numbers에 저장
+    const numbers = line.split(' '); // numArr를 순회하며 배열 순서대로 띄어쓰기 기준으로 나눠 numbers에 저장
     sum.push(Number(numbers[0]) + Number(numbers[1])); // numbers의 첫번째, 두번째 값을 숫자로 바꾼후 더하여 sum배열에 담기
 });
 console.log(sum.join('\n')); // 줄바꿈으로 합치기
