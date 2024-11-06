@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "prob": "node ./problem/10988/palindrome.js",
+        "prob": "node ./problem/1157/count.js",
         "clean": "prettier --write **/*.js *.mjs problem/**/*.js"
     },
     "keywords": [],
