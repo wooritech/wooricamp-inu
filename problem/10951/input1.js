@@ -24,7 +24,7 @@ const input = `1 1
 9 8
 5 2`;
 
-const inputBOJ = input.toString().trim().split('\n'); // 백준에서 제출할때와 최대한 비슷하게 맞춤
+const inputBOJ = input.toString().split('\n'); // 백준에서 제출할때와 최대한 비슷하게 맞춤
 const numArr = inputBOJ;
 const sum = []; // 숫자의 합을 담을 배열 초기화
 numArr.forEach((line) => {
