@@ -46,7 +46,7 @@ P z`;
 // }
 
 let cursor = start.length;
-const splitStr = input.split("\n");
+const splitStr = input.split('\n');
 let newArr = start;
 let command = [];
 
@@ -55,7 +55,7 @@ for (let i = 2; i < splitStr.length; i++) {
 }
 
 for (let i = 0; i < command.length; i++) {
-    if (command[i] === "B") {
+    if (command[i] === 'B') {
         if (cursor > 0) {
             let left = [];
             let right = [];
@@ -74,16 +74,16 @@ for (let i = 0; i < command.length; i++) {
         if (cursor <= 0) {
             cursor = 0;
         }
-    } else if (command[i] === "D") {
+    } else if (command[i] === 'D') {
         if (cursor < newArr.length) {
             cursor++;
         }
-    } else if (command[i] === "L") {
+    } else if (command[i] === 'L') {
         if (cursor > 0) {
             cursor--;
         }
-    } else if (command[i].includes("P")) {
-        const Alphabet = command[i].split(" ")[1];
+    } else if (command[i].includes('P')) {
+        const Alphabet = command[i].split(' ')[1];
         let left = [];
         let right = [];
 
@@ -100,4 +100,4 @@ for (let i = 0; i < command.length; i++) {
     }
 }
 
-console.log(newArr.join(""));
+console.log(newArr.join(''));
