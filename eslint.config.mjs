@@ -1,8 +1,9 @@
 import globals from 'globals'; // 'globals' 패키지에서 전역 변수를 가져온다.
 import pluginJs from '@eslint/js'; // '@eslint/js' 패키지에서 JavaScript 관련 ESLint 규칙을 가져온다.
+import pluginJest from 'eslint-plugin-jest';
 
 export default [
-    { languageOptions: { globals: globals.browser } },
+    { languageOptions: { globals: globals.browser }, plugins: { jest: pluginJest } },
     pluginJs.configs.recommended,
     {
         rules: {
@@ -12,6 +13,12 @@ export default [
         },
     },
     {
-        ignores: ['test/**', '.prettierrc.js', 'jest.config.js', 'node_modules/**'], // 제외
+        rules: {
+            'jest/no-disabled-tests': 'warn',
+            'jest/no-focused-tests': 'error',
+            'jest/no-identical-title': 'error',
+            'jest/prefer-to-have-length': 'warn',
+            'jest/valid-expect': 'error',
+        },
     },
 ];
